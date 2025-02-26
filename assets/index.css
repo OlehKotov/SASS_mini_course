@@ -21,3 +21,60 @@ body {
   color: white;
   background-color: hotpink;
 }
+
+ul > li {
+  list-style: none;
+}
+
+h2 + p {
+  border-top: 1px solid gray;
+}
+
+p ~ span {
+  opacity: 0.8;
+}
+
+.section {
+  width: 100px;
+}
+.section .title {
+  color: teal;
+}
+.section .text {
+  font-size: 14px;
+}
+
+.link {
+  color: black;
+}
+.link:hover, .link:focus {
+  color: red;
+}
+
+.button {
+  background-color: teal;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.button:hover, .button:focus {
+  color: red;
+}
+
+.button-icon {
+  width: 20px;
+  height: 20px;
+}
+.button-icon:hover, .button-icon:focus {
+  width: 40px;
+  height: 40px;
+}
+.button:hover .button-icon {
+  background-color: teal;
+}
+
+.button-label {
+  font-size: 16px;
+}
+.button:hover .button-label {
+  font-size: 20px;
+}

@@ -1,0 +1,27 @@
+$btn-padding-x: 12px !default;
+$btn-padding-y: 8px !default;
+$btn-layer-min-width: 32px !default;
+$btn-layer-min-height: 28px !default;
+$btn-layer-spacing: 0px !default;
+$btn-layer-border-radius: 12px !default;
+
+$btn-text-size: 14px !default;
+$btn-text-width: 500 !default;
+$btn-text-height: 20px !default;
+$btn-text-spacing: 0.5px !default;
+$btn-text-color: #FAFAFB !default;
+
+$btn-types: (
+    primary,
+    secondary,
+    default,
+    info,
+    success,
+    warning,
+    danger,
+    transparent,
+    frame
+);
+
+@import "btn-base";
+// @import "types";

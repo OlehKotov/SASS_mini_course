@@ -195,12 +195,71 @@ summary {
   grid-template-areas: "welcome" "co-workers" "tasks" "reports";
 }
 
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  min-width: 32px;
+  min-height: 28px;
+  padding: 12px 8px;
+  color: #FAFAFB;
+  border-radius: 12px;
+  transition-property: background-color, color, box-shadow;
+  transition-duration: 300ms;
+  transition-timing-function: ease;
+  font: inherit;
+  text-transform: none;
+  background-color: transparent;
+  border: 1px solid transparent;
+  margin: 0;
+  overflow: visible;
+  cursor: pointer;
+}
+.btn .btn-inner {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.4285714286;
+  letter-spacing: 0.0357142857em;
+}
+.btn .btn-icon {
+  fill: currentColor;
+}
+
+/* Primary type */
+.btn--primary {
+  background-color: #f07f2e;
+}
+.btn--primary:active {
+  background-color: #d14a00;
+}
+.btn--primary[disabled] {
+  background-color: #b5b5be;
+}
+
+/* Secondary type */
+.btn--secondary:active {
+  color: #d14a00;
+}
+.btn--secondary[disabled] {
+  color: #b5b5be;
+}
+
 .welcome {
   grid-area: welcome;
 }
 
+.welcome-btn {
+  display: block;
+  margin: 0 auto;
+}
+
 .co-workers {
   grid-area: co-workers;
+}
+
+.show-more-btn {
+  display: block;
+  margin: 0 auto;
 }
 
 .tasks {
@@ -259,5 +318,15 @@ summary {
     opacity: 1;
     pointer-events: initial;
     visibility: visible;
+  }
+}
+
+@media (hover: hover) {
+  .btn--primary:hover, .btn--primary:focus {
+    box-shadow: 0 4px 10px 0 rgba(240, 127, 46, 0.25);
+    background-color: #f15c27;
+  }
+  .btn--secondary:hover, .btn--secondary:focus {
+    color: #f15c27;
   }
 }

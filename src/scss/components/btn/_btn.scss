@@ -24,4 +24,5 @@ $btn-types: (
 );
 
 @import "btn-base";
-// @import "types";
+@import "types/primary";
+@import "types/secondary"

@@ -24,5 +24,7 @@
     @include mx.mq("lg") {
         display: flex;
         justify-content: space-between;
+
+        width: 100%;
     };
 }

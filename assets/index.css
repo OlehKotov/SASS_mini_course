@@ -459,6 +459,7 @@ summary {
   .header-right {
     display: flex;
     justify-content: space-between;
+    width: 100%;
   }
   .main {
     grid-area: main;

@@ -7,15 +7,22 @@
     display: flex;
     align-items: center;
     padding: 16px;
+    justify-content: space-between;
 
-    background-color: fn.get-color("dark-secondary");
+    background-color: fn.get-color("dark");
     box-shadow: 0px 1px 0px 0px #292932 inset;
 
     @include mx.mq("lg") {
         grid-area: header; 
         padding: 24px 36px;
         justify-content: space-between;
-    };
+        background-color: fn.get-color("dark-secondary");
+    };  
+}
 
-    
+.header-right {
+    @include mx.mq("lg") {
+        display: flex;
+        justify-content: space-between;
+    };
 }

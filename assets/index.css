@@ -147,6 +147,13 @@ meter {
   letter-spacing: 0.02em;
 }
 
+.page-title-accent {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.4;
+  letter-spacing: 0.03em;
+}
+
 body {
   font-weight: 400;
   font-size: 16px;
@@ -261,11 +268,17 @@ summary {
 
 .welcome {
   grid-area: welcome;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-end;
+  row-gap: 16px;
 }
 
-.welcome-btn {
+.page-title-accent {
   display: block;
-  margin: 0 auto;
+  margin-bottom: 8px;
+  color: #FAFAFB;
 }
 
 .co-workers {
@@ -465,6 +478,9 @@ summary {
     grid-area: main;
     grid-template-columns: repeat(auto-fit, minmax(455px, 629px));
     grid-template-areas: "welcome welcome" "co-workers tasks" "co-workers reports";
+  }
+  .page-title-accent {
+    margin-bottom: 16px;
   }
   .logo {
     padding: 16px 20px;

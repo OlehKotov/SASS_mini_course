@@ -161,7 +161,14 @@ body {
   letter-spacing: 0.03em;
 }
 
-.search-input, .menu-btn, .menu-link {
+.co-workers-title span {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.03em;
+}
+
+.search-input, .menu-btn, .menu-link, .co-workers-title {
   font-weight: 400;
   font-size: 14px;
   line-height: 1.43;
@@ -283,6 +290,50 @@ summary {
 
 .co-workers {
   grid-area: co-workers;
+}
+
+.co-workers-wrapper {
+  max-height: 388px;
+  padding: 16px;
+  margin-bottom: 40px;
+  border-radius: 12px;
+  background-color: #292932;
+}
+
+.co-workers-title {
+  margin-bottom: 28px;
+}
+.co-workers-container {
+  max-height: 296px;
+  overflow-y: auto;
+}
+.co-workers-container::-webkit-scrollbar {
+  width: 14px;
+}
+.co-workers-container::-webkit-scrollbar-track {
+  background-color: transparent;
+  border-radius: 104px;
+}
+.co-workers-container::-webkit-scrollbar-track:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+.co-workers-container::-webkit-scrollbar-thumb {
+  background-color: #B5B5BE;
+  background-clip: content-box;
+  border: 5px solid transparent;
+  border-radius: 100px;
+}
+.co-workers-container::-webkit-scrollbar-thumb:hover {
+  background-color: #F07F2E;
+}
+
+.co-workers-board {
+  margin-bottom: 20px;
+}
+
+.co-workers-btn {
+  display: block;
+  margin: 0 auto;
 }
 
 .show-more-btn {
@@ -482,6 +533,9 @@ summary {
   .page-title-accent {
     margin-bottom: 16px;
   }
+  .co-workers-container {
+    margin-right: 14px;
+  }
   .logo {
     padding: 16px 20px;
   }
@@ -490,6 +544,23 @@ summary {
   }
   .search-field {
     margin-right: auto;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .co-workers {
+    padding: 20px;
+    background-color: #292932;
+    border-radius: 12px;
+  }
+  .co-workers-wrapper {
+    max-height: 400px;
+    padding: 24px;
+    margin-bottom: 32px;
+    background-color: #1C1C24;
+  }
+  .co-workers-title {
+    margin-bottom: 36px;
   }
 }
 

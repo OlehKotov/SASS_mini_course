@@ -161,25 +161,30 @@ body {
   letter-spacing: 0.03em;
 }
 
-.co-workers-table caption span, .co-workers-title span {
+.board-caption, .co-workers-table caption span, .co-workers-title span {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.03em;
 }
 
-.search-input, .menu-btn, .menu-link, .co-workers-table caption, .co-workers-table tbody, .co-workers-details, .co-workers-title {
+.search-input, .menu-btn, .menu-link, .board-details, .person-caption, .board-tag, .co-workers-table caption, .co-workers-table tbody, .co-workers-details, .co-workers-title {
   font-weight: 400;
   font-size: 14px;
   line-height: 1.43;
   letter-spacing: 0.04em;
 }
 
-.co-workers-table thead th, .co-workers-position, .co-workers-accept {
+.badge-danger, .badge-warning, .badge-success, .co-workers-table thead th, .co-workers-position, .co-workers-accept {
   font-weight: 500;
   font-size: 14px;
   line-height: 1.43;
   letter-spacing: 0.04em;
+}
+
+.board-item {
+  padding: 16px;
+  border-radius: 12px;
 }
 
 body {
@@ -514,6 +519,62 @@ summary {
   object-position: top center;
 }
 
+.board {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.board-item {
+  display: flex;
+  flex-grow: 1;
+  justify-content: space-between;
+  gap: 43px;
+  background-color: #292932;
+}
+.board-item.hide {
+  display: none;
+}
+
+.board-caption {
+  margin-bottom: 8px;
+  color: #FAFAFB;
+}
+
+.board-details {
+  margin-bottom: 20px;
+  color: #B5B5BE;
+}
+
+.person {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.person-thumb {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.person-thumb img {
+  object-fit: cover;
+  object-position: top center;
+}
+
+.board-right {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+.board-tag {
+  margin-bottom: auto;
+  text-align: right;
+  color: #B5B5BE;
+}
+
 .tasks {
   grid-area: tasks;
 }
@@ -668,6 +729,33 @@ summary {
   min-height: 20px;
 }
 
+.badge-danger {
+  min-width: 96px;
+  padding: 4px 8px;
+  text-align: center;
+  color: #FAFAFB;
+  border-radius: 20px;
+  background-color: #FC5A5A;
+}
+
+.badge-warning {
+  min-width: 96px;
+  padding: 4px 8px;
+  text-align: center;
+  color: #FAFAFB;
+  border-radius: 20px;
+  background-color: #A461D8;
+}
+
+.badge-success {
+  min-width: 96px;
+  padding: 4px 8px;
+  text-align: center;
+  color: #FAFAFB;
+  border-radius: 20px;
+  background-color: #82C43C;
+}
+
 @media only screen and (min-width: 768px) {
   .main {
     gap: 36px;
@@ -681,6 +769,9 @@ summary {
 }
 
 @media only screen and (min-width: 1200px) {
+  .board-item {
+    padding: 24px;
+  }
   .page {
     display: grid;
     grid-template-columns: 248px 1fr;
@@ -746,6 +837,9 @@ summary {
   }
   .co-workers-table tbody td::after {
     background-color: #292932;
+  }
+  .board-item {
+    background-color: #1C1C24;
   }
 }
 

@@ -38,6 +38,7 @@
 
   span {
     @extend %accent-text;
+    color: fn.get-color('light-primary');
   }
 }
 

@@ -49,7 +49,7 @@
   overflow-y: auto;
 
   @include mx.mq('lg') {
-    margin-right: 14px;
+    margin-right: -14px;
   }
 }
 .co-workers-board {

@@ -50,3 +50,13 @@
     padding: 24px;
   }
 }
+
+%companies-item {
+  width: 100%;
+  height: 196px;
+  padding: 24px;
+
+  @include mx.mq('lg') {
+    width: 100%;
+};
+}

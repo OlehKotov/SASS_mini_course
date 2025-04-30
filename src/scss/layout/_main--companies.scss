@@ -1,0 +1,18 @@
+@use '../utils/placeholders';
+@use '../utils/variables' as var;
+@use '../utils/functions' as fn;
+@use '../utils/mixins' as mx;
+
+.main--companies {
+    display: grid;
+    gap: 40px;
+    padding: 16px;
+    grid-template-areas: 
+    'welcome'
+    'companies';
+
+    @include mx.mq("md") {
+        gap: 36px;
+        padding: 36px;
+     }; 
+}

@@ -154,14 +154,14 @@ meter {
   letter-spacing: 0.03em;
 }
 
-body {
+.companies-address, body {
   font-weight: 400;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.03em;
 }
 
-.reports-title span, .tasks-title span, .board-caption, .co-workers-table caption span, .co-workers-title span {
+.companies-heading, .reports-title span, .tasks-title span, .board-caption, .co-workers-table caption span, .co-workers-title span {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
@@ -175,16 +175,22 @@ body {
   letter-spacing: 0.04em;
 }
 
-.badge-danger, .badge-warning, .badge-success, .co-workers-table thead th, .co-workers-position, .co-workers-accept {
+.companies-btn, .badge-danger, .badge-warning, .badge-success, .co-workers-table thead th, .co-workers-position, .co-workers-accept {
   font-weight: 500;
   font-size: 14px;
   line-height: 1.43;
   letter-spacing: 0.04em;
 }
 
-.reports, .tasks, .board-item {
+.companies-item, .reports, .tasks, .board-item {
   padding: 16px;
   border-radius: 12px;
+}
+
+.companies-item {
+  width: 100%;
+  height: 196px;
+  padding: 24px;
 }
 
 body {
@@ -234,6 +240,13 @@ summary {
   gap: 40px;
   padding: 16px;
   grid-template-areas: "welcome" "co-workers" "tasks" "reports";
+}
+
+.main--companies {
+  display: grid;
+  gap: 40px;
+  padding: 16px;
+  grid-template-areas: "welcome" "companies";
 }
 
 .btn {
@@ -987,12 +1000,99 @@ summary {
   background-color: #82C43C;
 }
 
+.companies {
+  grid-area: companies;
+}
+
+.companies-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.companies-item {
+  background-color: #292932;
+}
+
+.companies-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.companies-heading {
+  color: #FFFFFF;
+}
+
+.companies-icon {
+  flex-shrink: 0;
+  stroke: #FFFFFF;
+  fill: transparent;
+}
+
+.fill {
+  fill: #FFFFFF;
+  stroke: none;
+}
+
+.companies-address-info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.companies-address-info svg {
+  fill: #82C43C;
+}
+
+.companies-address {
+  margin-top: 4px;
+}
+
+.companies-btn {
+  transition: 300ms ease;
+  transition-property: color, border-color;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 32px;
+  border: 1px solid;
+  border-color: #F07F2E;
+  color: #F07F2E;
+  border-radius: 12px;
+  padding: 8px 12px;
+  width: 89px;
+  height: 36px;
+  cursor: pointer;
+}
+.companies-btn:hover, .companies-btn:focus {
+  border-color: #F15C27;
+  color: #F15C27;
+}
+
+.icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  stroke-width: 0;
+  stroke: #fff;
+  fill: #fff;
+}
+
+.icon-Group {
+  width: 1.134765625em;
+}
+
 @media only screen and (min-width: 768px) {
   .main {
     gap: 36px;
     padding: 36px;
     grid-template-columns: repeat(2, 1fr);
     grid-template-areas: "welcome welcome" "co-workers co-workers" "tasks reports";
+  }
+  .main--companies {
+    gap: 36px;
+    padding: 36px;
   }
   .co-workers-details {
     display: none;
@@ -1003,8 +1103,11 @@ summary {
 }
 
 @media only screen and (min-width: 1200px) {
-  .reports, .tasks, .board-item {
+  .companies-item, .reports, .tasks, .board-item {
     padding: 24px;
+  }
+  .companies-item {
+    width: 100%;
   }
   .page {
     display: grid;
@@ -1048,6 +1151,10 @@ summary {
   }
   .search-field {
     margin-right: auto;
+  }
+  .companies-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 

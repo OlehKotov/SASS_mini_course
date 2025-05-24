@@ -242,13 +242,6 @@ summary {
   grid-template-areas: "welcome" "co-workers" "tasks" "reports";
 }
 
-.main--companies {
-  display: grid;
-  gap: 40px;
-  padding: 16px;
-  grid-template-areas: "welcome" "companies";
-}
-
 .btn {
   display: inline-flex;
   align-items: center;
@@ -1083,6 +1076,13 @@ summary {
   width: 1.134765625em;
 }
 
+.main--companies {
+  display: grid;
+  gap: 40px;
+  padding: 16px;
+  grid-template-areas: "welcome" "companies";
+}
+
 @media only screen and (min-width: 768px) {
   .main {
     gap: 36px;
@@ -1090,15 +1090,15 @@ summary {
     grid-template-columns: repeat(2, 1fr);
     grid-template-areas: "welcome welcome" "co-workers co-workers" "tasks reports";
   }
-  .main--companies {
-    gap: 36px;
-    padding: 36px;
-  }
   .co-workers-details {
     display: none;
   }
   .reports-item {
     gap: 32px;
+  }
+  .main--companies {
+    gap: 36px;
+    padding: 36px;
   }
 }
 
